@@ -996,17 +996,23 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
+var _context = require("./context/context");
+var _contextDefault = parcelHelpers.interopDefault(_context);
 var _jsxRuntime = require("react/jsx-runtime");
-_reactDomDefault.default.render(/*#__PURE__*/ _jsxRuntime.jsx(_appDefault.default, {}), document.getElementById('root'));
+_reactDomDefault.default.render(/*#__PURE__*/ _jsxRuntime.jsx(_contextDefault.default, {
+    children: /*#__PURE__*/ _jsxRuntime.jsx(_appDefault.default, {})
+}), document.getElementById('root'));
 
   $parcel$ReactRefreshHelpers$20e5.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react-dom":"j6uA9","./App":"2kQhy","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j6uA9":[function(require,module,exports) {
+},{"react-dom":"j6uA9","./App":"2kQhy","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./context/context":"3pZ21","react":"21dqq"}],"j6uA9":[function(require,module,exports) {
 'use strict';
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') return;
@@ -24120,6 +24126,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _productsList = require("./views/ProductsList/ProductsList");
 var _productsListDefault = parcelHelpers.interopDefault(_productsList);
+var _cart = require("./views/Cart/Cart");
+var _cartDefault = parcelHelpers.interopDefault(_cart);
 var _jsxRuntime = require("react/jsx-runtime");
 function App() {
     return /*#__PURE__*/ _jsxRuntime.jsxs("div", {
@@ -24127,6 +24135,7 @@ function App() {
             /*#__PURE__*/ _jsxRuntime.jsx("h1", {
                 children: "Ambev Shop"
             }),
+            /*#__PURE__*/ _jsxRuntime.jsx(_cartDefault.default, {}),
             /*#__PURE__*/ _jsxRuntime.jsx(_productsListDefault.default, {})
         ]
     });
@@ -24141,7 +24150,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","./views/ProductsList/ProductsList":"aXcAn","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aXcAn":[function(require,module,exports) {
+},{"react":"21dqq","./views/ProductsList/ProductsList":"aXcAn","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./views/Cart/Cart":"1VX5q"}],"aXcAn":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a60e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25873,11 +25882,11 @@ exports.export = function(dest, destName, get) {
 };
 
 },{}],"d460H":[function(require,module,exports) {
-module.exports["container"] = `aJKYBG_container`;
-module.exports["unities"] = `aJKYBG_unities`;
-module.exports["unities_price"] = `aJKYBG_unities_price`;
 module.exports["product"] = `aJKYBG_product`;
+module.exports["unities_price"] = `aJKYBG_unities_price`;
+module.exports["container"] = `aJKYBG_container`;
 module.exports["prices"] = `aJKYBG_prices`;
+module.exports["unities"] = `aJKYBG_unities`;
 
 },{}],"6AEwr":[function(require,module,exports) {
 'use strict';
@@ -26842,6 +26851,86 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequire00fc")
+},{"react-refresh/runtime":"786KC"}],"1VX5q":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f943 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f943.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _context = require("../../context/context");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _jsxRuntime = require("react/jsx-runtime");
+var _s = $RefreshSig$();
+function Cart() {
+    _s();
+    const { teste , setTeste  } = _react.useContext(_context.ContextApplication);
+    return /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                children: teste
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>setTeste(2)
+                ,
+                children: "Teste"
+            })
+        ]
+    });
+}
+_s(Cart, "z8wuHux8XOHxYYPaNlEEOqgRmQA=");
+_c = Cart;
+exports.default = Cart;
+var _c;
+$RefreshReg$(_c, "Cart");
+
+  $parcel$ReactRefreshHelpers$f943.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"../../context/context":"3pZ21","react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3pZ21":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fa46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fa46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ContextApplication", ()=>ContextApplication
+);
+/* eslint-disable react/prop-types */ var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _jsxRuntime = require("react/jsx-runtime");
+var _s = $RefreshSig$();
+const ContextApplication = /*#__PURE__*/ _react.createContext();
+const ApplicationProvider = ({ children  })=>{
+    _s();
+    const [teste, setTeste] = _react.useState(1);
+    const context = {
+        teste,
+        setTeste
+    };
+    return /*#__PURE__*/ _jsxRuntime.jsx(ContextApplication.Provider, {
+        value: context,
+        children: children
+    });
+};
+_s(ApplicationProvider, "GJX5cHfoaVBHLI3Vbw2FoN6ZrfY=");
+_c = ApplicationProvider;
+exports.default = ApplicationProvider;
+var _c;
+$RefreshReg$(_c, "ApplicationProvider");
+
+  $parcel$ReactRefreshHelpers$fa46.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["kn9T2","7nZVA","8lqZg"], "8lqZg", "parcelRequire00fc")
 
 //# sourceMappingURL=index.975ef6c8.js.map
