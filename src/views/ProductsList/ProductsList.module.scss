@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   .product {
-    width: 200px;
+    // width: 200px;
     margin: 20px;
     padding: 20px;
     border: 1px solid black;
@@ -16,6 +16,28 @@
     min-height: 200px;
     img {
       width: 100px
+    }
+    .prices {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      margin: 5px;
+      .unities {
+      background-color: bisque;
+      border: 1px solid #f0f;
+      padding: 5px;
+
+        p {
+          font-size: 6px;
+        }
+      }
+      .unities_price {
+        padding: 5px;
+        p:first-child {
+          font-size: 10px;
+        }
+      }
     }
   }
 }

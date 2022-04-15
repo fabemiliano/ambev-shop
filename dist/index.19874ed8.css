@@ -5,7 +5,6 @@
 }
 
 .aJKYBG_container .aJKYBG_product {
-  width: 200px;
   text-align: center;
   min-height: 200px;
   border: 1px solid #000;
@@ -19,6 +18,32 @@
 
 .aJKYBG_container .aJKYBG_product img {
   width: 100px;
+}
+
+.aJKYBG_container .aJKYBG_product .aJKYBG_prices {
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  display: flex;
+}
+
+.aJKYBG_container .aJKYBG_product .aJKYBG_prices .aJKYBG_unities {
+  background-color: bisque;
+  border: 1px solid #f0f;
+  padding: 5px;
+}
+
+.aJKYBG_container .aJKYBG_product .aJKYBG_prices .aJKYBG_unities p {
+  font-size: 6px;
+}
+
+.aJKYBG_container .aJKYBG_product .aJKYBG_prices .aJKYBG_unities_price {
+  padding: 5px;
+}
+
+.aJKYBG_container .aJKYBG_product .aJKYBG_prices .aJKYBG_unities_price p:first-child {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=index.19874ed8.css.map */

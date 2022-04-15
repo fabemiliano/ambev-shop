@@ -24167,6 +24167,74 @@ function checkIfImageIsValid(items) {
         ] : acc;
     }, []);
 }
+let discountOverFiften;
+let discount;
+function calculaDesconto(valorInicial, valorFinal) {
+    discount = ((1 - valorFinal / valorInicial) * 100).toFixed(0);
+    discountOverFiften = discount > 15;
+    return discount;
+}
+function addToCart(productId, packageId) {
+    const obj = {
+        productId,
+        packageId,
+        quantity: 0
+    };
+    localStorage.setItem('cart', obj);
+}
+function renderOptions(e, el) {
+    return /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        className: _productsListModuleScssDefault.default.prices,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                className: _productsListModuleScssDefault.default.unities,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                        children: el.unities
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                        children: "unidades"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                className: _productsListModuleScssDefault.default.unities_price,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                        children: [
+                            "De: R$",
+                            Number(el.original_price).toFixed(2)
+                        ]
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                        children: [
+                            "Por: R$",
+                            Number(el.current_price).toFixed(2)
+                        ]
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                        children: [
+                            "Desc: ",
+                            calculaDesconto(el.original_price, el.current_price),
+                            "%"
+                        ]
+                    }),
+                    discountOverFiften && /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                        children: [
+                            "descont\xE3o",
+                            discount
+                        ]
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        onClick: ()=>addToCart(e.id, el.id)
+                        ,
+                        children: "Adicionar ao carrinho"
+                    })
+                ]
+            })
+        ]
+    });
+}
 function ProductsList() {
     _s();
     _react.useEffect(()=>{
@@ -24192,6 +24260,14 @@ function ProductsList() {
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx("img", {
                                     src: e.image
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("p", {
+                                    children: e.status
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                    className: _productsListModuleScssDefault.default.prices,
+                                    children: e.packs.map((el)=>renderOptions(e, el)
+                                    )
                                 })
                             ]
                         })
@@ -25797,8 +25873,11 @@ exports.export = function(dest, destName, get) {
 };
 
 },{}],"d460H":[function(require,module,exports) {
-module.exports["product"] = `aJKYBG_product`;
 module.exports["container"] = `aJKYBG_container`;
+module.exports["unities"] = `aJKYBG_unities`;
+module.exports["unities_price"] = `aJKYBG_unities_price`;
+module.exports["product"] = `aJKYBG_product`;
+module.exports["prices"] = `aJKYBG_prices`;
 
 },{}],"6AEwr":[function(require,module,exports) {
 'use strict';
