@@ -24158,7 +24158,6 @@ var _productsListModuleScssDefault = parcelHelpers.interopDefault(_productsListM
 var _jsxRuntime = require("react/jsx-runtime");
 var _s = $RefreshSig$();
 function checkIfImageIsValid(items) {
-    console.log(items);
     return items.reduce((acc, e)=>{
         const a = document.createElement('img');
         a.src = e.image;
@@ -25798,8 +25797,8 @@ exports.export = function(dest, destName, get) {
 };
 
 },{}],"d460H":[function(require,module,exports) {
-module.exports["container"] = `aJKYBG_container`;
 module.exports["product"] = `aJKYBG_product`;
+module.exports["container"] = `aJKYBG_container`;
 
 },{}],"6AEwr":[function(require,module,exports) {
 'use strict';

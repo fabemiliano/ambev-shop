@@ -4,7 +4,6 @@ import { getAllProducts } from '../../services/api'
 import styles from './ProductsList.module.scss'
 
 function checkIfImageIsValid(items) {
-  console.log(items)
   return items.reduce((acc, e) => {
     const a = document.createElement('img')
     a.src = e.image
