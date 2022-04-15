@@ -5,9 +5,12 @@ export const ContextApplication = createContext()
 
 const ApplicationProvider = ({ children }) => {
   const [teste, setTeste] = useState(1)
+  const [itemsLoaded, setItemsLoaded] = useState([])
   const context = {
     teste,
-    setTeste
+    setTeste,
+    itemsLoaded,
+    setItemsLoaded
   }
 
   return <ContextApplication.Provider value={context}>{children}</ContextApplication.Provider>
