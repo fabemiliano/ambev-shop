@@ -1,0 +1,24 @@
+.aJKYBG_container {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.aJKYBG_container .aJKYBG_product {
+  width: 200px;
+  text-align: center;
+  min-height: 200px;
+  border: 1px solid #000;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.aJKYBG_container .aJKYBG_product img {
+  width: 100px;
+}
+
+/*# sourceMappingURL=index.19874ed8.css.map */
